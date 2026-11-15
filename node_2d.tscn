@@ -1,20 +1,55 @@
 [gd_scene format=3 uid="uid://bbxfi81h2pfiy"]
 
 [ext_resource type="Script" uid="uid://birob1kau404k" path="res://character_body_2d.gd" id="1_wtcfe"]
+[ext_resource type="Texture2D" uid="uid://cjeql6oml5r05" path="res://addons/Untitled.png" id="2_0e48y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_toviy"]
 size = Vector2(1150, 78)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0e48y"]
+size = Vector2(30, 576)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_epypp"]
+size = Vector2(120, 579)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_m58al"]
+a = Vector2(100000, -583)
+b = Vector2(0, -583)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m58al"]
+size = Vector2(138, 138)
+
 [node name="Node2D" type="Node2D" unique_id=132862471]
 
-[node name="Area2D" type="Area2D" parent="." unique_id=780672308]
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=925048614]
 position = Vector2(6, 581)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1133697459]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1133697459]
 position = Vector2(573, 26)
 shape = SubResource("RectangleShape2D_toviy")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=620555916]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=173613230]
+position = Vector2(5, -298)
+shape = SubResource("RectangleShape2D_0e48y")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=580962466]
+position = Vector2(1203, -299.5)
+shape = SubResource("RectangleShape2D_epypp")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=2144574929]
+shape = SubResource("SegmentShape2D_m58al")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1737022370]
+shape = SubResource("SegmentShape2D_m58al")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1638498480]
+position = Vector2(199, -2)
 script = ExtResource("1_wtcfe")
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=448005]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=717674748]
+scale = Vector2(0.62, 0.62)
+shape = SubResource("RectangleShape2D_m58al")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=2013250578]
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("2_0e48y")
