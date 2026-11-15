@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://bituuckb63r4l"]
 
+[ext_resource type="Script" uid="uid://bwbk6yu07y0db" path="res://main_menu.gd" id="1_gvk52"]
+[ext_resource type="AudioStream" uid="uid://cm8gbyaul60q5" path="res://music.wav" id="2_j3jwc"]
+
 [node name="Control" type="Control" unique_id=1879123704]
 layout_mode = 3
 anchors_preset = 15
@@ -7,21 +10,29 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_gvk52")
 
 [node name="Button" type="Button" parent="." unique_id=287460032]
 layout_mode = 0
-offset_left = 252.0
+offset_left = 274.0
 offset_top = 405.0
-offset_right = 875.0
+offset_right = 897.0
 offset_bottom = 581.0
 theme_override_font_sizes/font_size = 83
 text = "Play"
 
 [node name="Label" type="Label" parent="." unique_id=442911041]
 layout_mode = 0
-offset_left = 141.0
+offset_left = 178.0
 offset_top = 104.0
-offset_right = 987.0
+offset_right = 1024.0
 offset_bottom = 266.0
 theme_override_font_sizes/font_size = 118
 text = "TheFourthWay"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2052812931]
+stream = ExtResource("2_j3jwc")
+volume_db = 1.5
+autoplay = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
