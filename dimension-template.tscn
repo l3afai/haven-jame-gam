@@ -2,10 +2,17 @@
 
 [ext_resource type="Texture2D" uid="uid://vbksfv1b5nft" path="res://dimension-background.png" id="1_b7y7o"]
 
-[node name="Node2D" type="Node2D" unique_id=775412582]
-position = Vector2(269, 139)
+[node name="Node2D" type="Node2D" unique_id=1895164498]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1728641170]
-position = Vector2(313.00003, 192.25003)
-scale = Vector2(2.006431, 2.256447)
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=303745604]
+layer = -1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=14378186]
+anchors_preset = -1
+anchor_right = 0.157
+anchor_bottom = 0.127
+offset_left = 14.0
+offset_top = -7.0
+offset_right = 455.136
+offset_bottom = 259.70398
 texture = ExtResource("1_b7y7o")
