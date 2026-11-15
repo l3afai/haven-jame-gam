@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bwbk6yu07y0db" path="res://main_menu.gd" id="1_gvk52"]
 [ext_resource type="AudioStream" uid="uid://cm8gbyaul60q5" path="res://music.wav" id="2_j3jwc"]
+[ext_resource type="Texture2D" uid="uid://b1ipo516cnbt1" path="res://IMG_6231.PNG" id="2_mue8r"]
 
 [node name="Control" type="Control" unique_id=1879123704]
 layout_mode = 3
@@ -12,22 +13,27 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_gvk52")
 
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=265955144]
+position = Vector2(634, 350.00003)
+scale = Vector2(0.51, 0.51)
+texture = ExtResource("2_mue8r")
+
 [node name="Button" type="Button" parent="." unique_id=287460032]
 layout_mode = 0
-offset_left = 274.0
-offset_top = 405.0
-offset_right = 897.0
-offset_bottom = 581.0
+offset_left = 698.0
+offset_top = 374.0
+offset_right = 1105.0
+offset_bottom = 515.0
 theme_override_font_sizes/font_size = 83
 text = "Play"
 
 [node name="Label" type="Label" parent="." unique_id=442911041]
 layout_mode = 0
-offset_left = 178.0
-offset_top = 104.0
-offset_right = 1024.0
-offset_bottom = 266.0
-theme_override_font_sizes/font_size = 118
+offset_left = 664.0
+offset_top = 229.0
+offset_right = 1110.0
+offset_bottom = 316.0
+theme_override_font_sizes/font_size = 63
 text = "TheFourthWay"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2052812931]
