@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://bbxfi81h2pfiy"]
 
-[ext_resource type="Script" uid="uid://birob1kau404k" path="res://character_body_2d.gd" id="1_wtcfe"]
-[ext_resource type="Texture2D" uid="uid://cjeql6oml5r05" path="res://addons/Untitled.png" id="2_0e48y"]
+[ext_resource type="PackedScene" uid="uid://dmjvqibij2nrv" path="res://maincharacter.tscn" id="1_wtcfe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_toviy"]
 size = Vector2(1150, 78)
@@ -15,9 +14,6 @@ size = Vector2(120, 579)
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_m58al"]
 a = Vector2(100000, -583)
 b = Vector2(0, -583)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_m58al"]
-size = Vector2(138, 138)
 
 [node name="Node2D" type="Node2D" unique_id=132862471]
 
@@ -42,14 +38,5 @@ shape = SubResource("SegmentShape2D_m58al")
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1737022370]
 shape = SubResource("SegmentShape2D_m58al")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1638498480]
-position = Vector2(199, -2)
-script = ExtResource("1_wtcfe")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=717674748]
-scale = Vector2(0.62, 0.62)
-shape = SubResource("RectangleShape2D_m58al")
-
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=2013250578]
-scale = Vector2(0.09, 0.09)
-texture = ExtResource("2_0e48y")
+[node name="CharacterBody2D" parent="." unique_id=1602337107 instance=ExtResource("1_wtcfe")]
+position = Vector2(144, 15)
