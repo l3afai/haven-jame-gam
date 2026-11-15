@@ -1,10 +1,22 @@
 [gd_scene format=3 uid="uid://dtmm3uk8apv3s"]
 
 [ext_resource type="Texture2D" uid="uid://j6p8b68sk11k" path="res://Complete Screen.png" id="1_ejw5a"]
+[ext_resource type="Script" uid="uid://bmn3vae7kcb7d" path="res://close-game-script.gd" id="2_u1b40"]
 
 [node name="Node2D" type="Node2D" unique_id=1284815883]
+script = ExtResource("2_u1b40")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=534510326]
 position = Vector2(629, 415.00003)
 scale = Vector2(0.66, 0.66)
 texture = ExtResource("1_ejw5a")
+
+[node name="Button" type="Button" parent="." unique_id=1189115265]
+offset_left = 749.0
+offset_top = 316.0
+offset_right = 1061.0
+offset_bottom = 424.0
+theme_override_font_sizes/font_size = 43
+text = "Bounce Back"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
