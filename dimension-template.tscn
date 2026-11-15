@@ -1,6 +1,14 @@
 [gd_scene format=3 uid="uid://d1afca4sjbsj"]
 
+[ext_resource type="Texture2D" uid="uid://vbksfv1b5nft" path="res://dimension-background.png" id="1_b7y7o"]
+
 [node name="Node2D" type="Node2D" unique_id=775412582]
+position = Vector2(-16, -10)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1797333270]
-position = Vector2(533, 327)
+position = Vector2(532, 341)
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=216836889]
+position = Vector2(2310.001, 1416.998)
+scale = Vector2(169.3147, 232.45773)
+texture = ExtResource("1_b7y7o")
